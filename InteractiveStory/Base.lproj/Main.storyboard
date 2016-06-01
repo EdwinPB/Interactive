@@ -16,7 +16,21 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTY-3V-khk">
+                                <rect key="frame" x="166" y="531" width="43" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Start"/>
+                                <connections>
+                                    <segue destination="85U-nl-sgx" kind="show" id="esI-dk-mZ5"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VTY-3V-khk" secondAttribute="bottom" constant="100" id="0s1-Ft-Obv"/>
+                            <constraint firstItem="VTY-3V-khk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOp-Cs-2Hj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mYa-Bd-bIP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -24,6 +38,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1251.5" y="429.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="2So-ac-JjQ">
+            <objects>
+                <viewController id="85U-nl-sgx" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JH3-xB-Oxj"/>
+                        <viewControllerLayoutGuide type="bottom" id="8U4-Sd-Z35"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n2E-PP-1i3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Emh-iW-V1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1713.5" y="429.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gmR-x8-nPX">
