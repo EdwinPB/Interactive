@@ -1,10 +1,4 @@
-//
-//  ViewController.swift
-//  InteractiveStory
-//
-//  Created by Edwin Polo on 6/1/16.
-//  Copyright © 2016 Edwin Polo. All rights reserved.
-//
+
 
 import UIKit
 
