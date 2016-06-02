@@ -13,6 +13,7 @@ enum Story: String {
     case Monster
     case Droid
     case Home
+    
 }
 
 extension Story {
@@ -23,23 +24,23 @@ extension Story {
     var text: String {
         switch self {
         case .ReturnTrip:
-            return "thing"
+            return "thing1"
         case .TouchDown:
-            return "thing"
+            return "thing2"
         case .Homeward:
-            return "thing"
+            return "thing3"
         case .Rover:
-            return "thing"
+            return "thing4"
         case .Cave:
-            return "thing"
+            return "thing5"
         case .Crate:
-            return "thing"
+            return "thing6"
         case .Monster:
-            return "thing"
+            return "thing7"
         case .Droid:
-            return "thing"
+            return "thing8"
         case .Home:
-            return "thing"
+            return "thing9"
         }
     }
     
@@ -83,8 +84,8 @@ struct Adventure {
         let returnTrip = Page(story: .ReturnTrip)
         let touchdown = returnTrip.addChoice("Stop and investigate", story: .TouchDown)
         let homeward = returnTrip.addChoice("Continue Home to Earth", story: .Homeward)
-        let rover = returnTrip.addChoice("Explore the rover", story: .Rover)
-        let crate = returnTrip.addChoice("Open the crate", story: .Crate)
+        let rover = touchdown.addChoice("Explore the rover", story: .Rover)
+        let crate = touchdown.addChoice("Open the crate", story: .Crate)
         
         homeward.addChoice("Head back to mars", page: touchdown)
         let home = rover.addChoice("Continue towards", story: .Home)

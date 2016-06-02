@@ -22,14 +22,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <segue destination="85U-nl-sgx" kind="show" id="esI-dk-mZ5"/>
+                                    <segue destination="85U-nl-sgx" kind="show" identifier="startAdventure" id="esI-dk-mZ5"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beginning" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-wB-SUJ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VTY-3V-khk" secondAttribute="bottom" constant="100" id="0s1-Ft-Obv"/>
+                            <constraint firstItem="Vhj-wB-SUJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6UU-Fi-6Hg"/>
+                            <constraint firstItem="Vhj-wB-SUJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9nq-n8-EQf"/>
+                            <constraint firstAttribute="trailing" secondItem="Vhj-wB-SUJ" secondAttribute="trailing" id="Wca-mr-geF"/>
                             <constraint firstItem="VTY-3V-khk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOp-Cs-2Hj"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vhj-wB-SUJ" secondAttribute="bottom" id="wzp-Ca-gcV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mYa-Bd-bIP"/>
@@ -39,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="1251.5" y="429.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Controller-->
         <scene sceneID="2So-ac-JjQ">
             <objects>
-                <viewController id="85U-nl-sgx" sceneMemberID="viewController">
+                <viewController id="85U-nl-sgx" customClass="PageController" customModule="InteractiveStory" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="JH3-xB-Oxj"/>
                         <viewControllerLayoutGuide type="bottom" id="8U4-Sd-Z35"/>
@@ -84,4 +91,7 @@
             <point key="canvasLocation" x="770.5" y="429.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Beginning" width="320" height="569"/>
+    </resources>
 </document>
