@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -28,19 +29,35 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Beginning" translatesAutoresizingMaskIntoConstraints="NO" id="Vhj-wB-SUJ">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AbH-Fv-FPa">
+                                <rect key="frame" x="40" y="401" width="295" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="9v6-4K-7j2"/>
+                                </connections>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VTY-3V-khk" secondAttribute="bottom" constant="100" id="0s1-Ft-Obv"/>
+                            <constraint firstItem="VTY-3V-khk" firstAttribute="top" secondItem="AbH-Fv-FPa" secondAttribute="bottom" constant="100" id="3jk-K0-emw"/>
                             <constraint firstItem="Vhj-wB-SUJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="6UU-Fi-6Hg"/>
                             <constraint firstItem="Vhj-wB-SUJ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="9nq-n8-EQf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AbH-Fv-FPa" secondAttribute="trailing" constant="24" id="LVC-AR-thp"/>
                             <constraint firstAttribute="trailing" secondItem="Vhj-wB-SUJ" secondAttribute="trailing" id="Wca-mr-geF"/>
+                            <constraint firstItem="AbH-Fv-FPa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aCb-kH-SLk"/>
+                            <constraint firstItem="AbH-Fv-FPa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="24" id="gLO-xk-GwG"/>
                             <constraint firstItem="VTY-3V-khk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iOp-Cs-2Hj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Vhj-wB-SUJ" secondAttribute="bottom" id="wzp-Ca-gcV"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mYa-Bd-bIP"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="nameTextField" destination="AbH-Fv-FPa" id="nTU-Vi-gAJ"/>
+                        <outlet property="textfieldContrains" destination="3jk-K0-emw" id="ZF0-Km-JCc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

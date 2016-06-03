@@ -292,6 +292,7 @@
 				2330E9A91CFF45DA00BE3307 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -3,17 +3,31 @@ import Foundation
 
 import UIKit
 
-enum Story: String {
-    case ReturnTrip
+enum Story {
+    case ReturnTrip(String)
     case TouchDown
     case Homeward
-    case Rover
+    case Rover(String)
     case Cave
     case Crate
     case Monster
-    case Droid
+    case Droid(String)
     case Home
     
+    var rawValue: String {
+        switch self {
+        case .ReturnTrip: return "ReturnTrip"
+        case .TouchDown: return "TouchDown"
+        case .Homeward: return "Homeward"
+        case .Rover: return "Rover"
+        case .Cave: return "Cave"
+        case .Crate: return "Crate"
+        case .Monster: return "Monster"
+        case .Droid: return "Droid"
+        case .Home: return "Home"
+
+        }
+    }
 }
 
 extension Story {
@@ -23,22 +37,22 @@ extension Story {
     
     var text: String {
         switch self {
-        case .ReturnTrip:
-            return "thing1"
+        case .ReturnTrip(let name):
+            return "thing1\(name)"
         case .TouchDown:
             return "thing2"
         case .Homeward:
             return "thing3"
-        case .Rover:
-            return "thing4"
+        case .Rover(let name):
+            return "thing4\(name)"
         case .Cave:
             return "thing5"
         case .Crate:
             return "thing6"
         case .Monster:
             return "thing7"
-        case .Droid:
-            return "thing8"
+        case .Droid(let name):
+            return "thing8\(name)"
         case .Home:
             return "thing9"
         }
@@ -80,11 +94,11 @@ extension Page {
 }
 
 struct Adventure {
-    static var story: Page {
-        let returnTrip = Page(story: .ReturnTrip)
+    static func story (name: String) -> Page {
+        let returnTrip = Page(story: .ReturnTrip(name))
         let touchdown = returnTrip.addChoice("Stop and investigate", story: .TouchDown)
         let homeward = returnTrip.addChoice("Continue Home to Earth", story: .Homeward)
-        let rover = touchdown.addChoice("Explore the rover", story: .Rover)
+        let rover = touchdown.addChoice("Explore the rover", story: .Rover(name))
         let crate = touchdown.addChoice("Open the crate", story: .Crate)
         
         homeward.addChoice("Head back to mars", page: touchdown)
@@ -93,7 +107,7 @@ struct Adventure {
         let cave = rover.addChoice("Explore the Coordinates", story: .Cave)
         rover.addChoice("Return to Earth", page: home)
         
-        cave.addChoice("Continue towards faint", story: .Droid)
+        cave.addChoice("Continue towards faint", story: .Droid(name))
         cave.addChoice("Refill the ship", page: rover)
         
         crate.addChoice("Explore the Rover", page: rover)
